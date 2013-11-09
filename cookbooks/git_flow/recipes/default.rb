@@ -20,6 +20,9 @@
 # There is no vim package on RHEL/CentOS derivatives
 # * vim-minimal gives you /bin/vi
 # * vim-enhanced gives you /usr/bin/vim
+
+include_recipe "git"
+
 git_flow_base_pkgs = value_for_platform(
   ["ubuntu", "debian", "arch"] => { "default" => ["git-flow"] },
   "default" => ["git-flow"]
