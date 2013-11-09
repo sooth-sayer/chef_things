@@ -1,0 +1,24 @@
+[submodule "cookbooks/chef_handler"]
+	path = cookbooks/chef_handler
+	url = git@github.com:opscode-cookbooks/chef_handler.git
+[submodule "cookbooks/yum"]
+	path = cookbooks/yum
+	url = git@github.com:opscode-cookbooks/yum.git
+[submodule "cookbooks/build-essential"]
+	path = cookbooks/build-essential
+	url = git@github.com:opscode-cookbooks/build-essential.git
+[submodule "cookbooks/dmg"]
+	path = cookbooks/dmg
+	url = git@github.com:opscode-cookbooks/dmg.git
+[submodule "cookbooks/git"]
+	path = cookbooks/git
+	url = git@github.com:opscode-cookbooks/git.git
+[submodule "cookbooks/runit"]
+	path = cookbooks/runit
+	url = git@github.com:opscode-cookbooks/runit.git
+[submodule "cookbooks/vim"]
+	path = cookbooks/vim
+	url = git@github.com:opscode-cookbooks/vim.git
+[submodule "cookbooks/windows"]
+	path = cookbooks/windows
+	url = git@github.com:opscode-cookbooks/windows.git
