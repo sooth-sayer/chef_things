@@ -1,0 +1,3 @@
+source ~/.vim/custom/functions.vim
+source ~/.vim/custom/mappings.vim
+source ~/.vim/custom/autocmds.vim
