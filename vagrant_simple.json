@@ -6,5 +6,5 @@
   "run_list": [
                 "recipe[git]", "recipe[git-flow]", "recipe[git-config]",
                 "recipe[vim]", "recipe[janus]", "recipe[vim-ruby]", "recipe[custom-vim-settings]",
-                "recipe[rvm]
+                "recipe[rvm]"
   ]
