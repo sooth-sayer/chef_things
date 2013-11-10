@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: vim
+# Cookbook Name:: git flow
 # Recipe:: default
 #
 # Copyright 2010, Opscode, Inc.
@@ -15,11 +15,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-
-# There is no vim package on RHEL/CentOS derivatives
-# * vim-minimal gives you /bin/vi
-# * vim-enhanced gives you /usr/bin/vim
 
 include_recipe "git"
 

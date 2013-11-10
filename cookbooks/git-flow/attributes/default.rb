@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: vim
+# Cookbook Name:: git flow
 # Attributes:: default
 #
 # Copyright 2010, Opscode, Inc.
