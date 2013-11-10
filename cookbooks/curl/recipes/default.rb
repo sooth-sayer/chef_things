@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: vim
+# Cookbook Name:: curl
 # Recipe:: default
 #
 # Copyright 2010, Opscode, Inc.
@@ -17,9 +17,6 @@
 # limitations under the License.
 #
 
-# There is no vim package on RHEL/CentOS derivatives
-# * vim-minimal gives you /bin/vi
-# * vim-enhanced gives you /usr/bin/vim
 curl_base_pkgs = value_for_platform(
   ["ubuntu", "debian", "arch"] => { "default" => ["curl"] },
   "default" => ["curl"]
