@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: vim
+# Cookbook Name:: rvm
 # Attributes:: default
 #
 # Copyright 2010, Opscode, Inc.
