@@ -34,8 +34,8 @@
    dump = cat-file -p
    mt = mergetool -t meld
 [user]
-	email = d.chernyatiev@gmail.com
-	name = Dmitry Chernyatiev
+	email = {some@email.com}
+  name = {some_name}
 [core]
 	editor = vim
 [push]
