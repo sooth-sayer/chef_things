@@ -32,3 +32,14 @@ bash "User configuration" do
     git config --global user.email "#{node[:git_config][:user_email]}"
   EOC
 end
+
+# FIXME Adding github to known hosts seems like a hack...
+bash "Add default ssh keys and add github to known hosts" do
+  user "#{node[:common][:user_name]}"
+  returns [0, 1]
+  code <<-EOC
+    cp "#{node[:git_config][:private_rsa_key_path]}" "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.ssh/id_rsa"
+    cp "#{node[:git_config][:public_rsa_key_path]}" "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.ssh/id_rsa.pub"
+    ssh -T -o StrictHostKeyChecking=no git@github.com
+  EOC
+end

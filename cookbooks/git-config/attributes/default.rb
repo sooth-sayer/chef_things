@@ -19,3 +19,5 @@
 
 default[:git_config][:user_name] = "vagrant"
 default[:git_config][:user_email] = "vagrant@null.com"
+default[:git_config][:private_rsa_key_path] = "#{Chef::Config[:file_cache_path]}/id_rsa"
+default[:git_config][:public_rsa_key_path] = "#{Chef::Config[:file_cache_path]}/id_rsa.pub"

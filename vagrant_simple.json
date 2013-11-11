@@ -1,7 +1,9 @@
 {
   "git_config": {
     "user_name": "you_name_here",
-    "user_email": "{you@email.here}"
+    "user_email": "you@email.here",
+    "private_rsa_key_path": "path/to/private/ssh/key",
+    "public_rsa_key_path": "path/to/public/ssh/key"
   },
   "run_list": [
                 "recipe[git]", "recipe[git-flow]", "recipe[git-config]",
