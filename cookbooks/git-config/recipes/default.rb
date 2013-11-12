@@ -25,9 +25,12 @@ git_completion.each do |f|
   end
 end
 
-bash "User configuration" do
+execute "User configuration" do
   user "#{node[:common][:user_name]}"
-  code <<-EOC
+  group "#{node[:common][:user_name]}"
+  action :run
+  environment ({"HOME" => "#{node[:common][:home_path]}/#{node[:common][:user_name]}", "USER" => "#{node[:common][:user_name]}" })
+  command <<-EOC
     git config --global user.name "#{node[:git_config][:user_name]}"
     git config --global user.email "#{node[:git_config][:user_email]}"
   EOC

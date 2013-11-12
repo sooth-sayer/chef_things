@@ -10,9 +10,10 @@ include_recipe "ack"
 include_recipe "ctags"
 include_recipe "rake"
 
-bash "install_janus" do
+execute "install_janus" do
   user "#{node['common']['user_name']}"
-  code <<-EOC
+  environment ({ "HOME" => "#{node[:common][:home_path]}/#{node[:common][:user_name]}", "USER" => "#{node[:common][:user_name]}" })
+  command <<-EOC
     curl -Lo- https://bit.ly/janus-bootstrap | bash
   EOC
 end
