@@ -25,3 +25,6 @@
 [submodule "cookbooks/sudo"]
 	path = cookbooks/sudo
 	url = git@github.com:opscode-cookbooks/sudo.git
+[submodule "cookbooks/tmux"]
+	path = cookbooks/tmux
+	url = git@github.com:opscode-cookbooks/tmux.git
