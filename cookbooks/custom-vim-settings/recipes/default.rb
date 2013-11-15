@@ -29,7 +29,6 @@ end
   end
 end
 
-
 directory "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.janus/nerdtree/ftplugin" do
   owner "#{node[:common][:user_name]}"
   group "#{node[:common][:user_name]}"
