@@ -11,7 +11,7 @@ directory "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.vim/custom
   action :create
 end
 
-%w{settings.vim mappings.vim functions.vim autocmds.vim}.each do |f|
+%w{settings_after.vim settings_before.vim mappings.vim functions.vim autocmds.vim}.each do |f|
   template "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.vim/custom/#{f}" do
     source "#{f}"
     owner "#{node[:common][:user_name]}"
