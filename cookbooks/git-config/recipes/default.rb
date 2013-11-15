@@ -42,7 +42,9 @@ bash "Add default ssh keys and add github to known hosts" do
   returns [0, 1]
   code <<-EOC
     cp "#{node[:git_config][:private_rsa_key_path]}" "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.ssh/id_rsa"
+    chmod 600 "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.ssh/id_rsa"
     cp "#{node[:git_config][:public_rsa_key_path]}" "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.ssh/id_rsa.pub"
+    chmod 600 "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.ssh/id_rsa.pub"
     ssh -T -o StrictHostKeyChecking=no git@github.com
   EOC
 end
