@@ -29,6 +29,22 @@ end
   end
 end
 
+
+directory "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.janus/nerdtree/ftplugin" do
+  owner "#{node[:common][:user_name]}"
+  group "#{node[:common][:user_name]}"
+  mode "0755"
+  action :create
+  recursive true
+end
+
+template "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.janus/nerdtree/ftplugin/nerdtree.vim" do
+  source "ftplugin/nerdtree/nerdtree.vim"
+  owner "#{node[:common][:user_name]}"
+  group "#{node[:common][:user_name]}"
+  mode 0644
+end
+
 node[:custom_vim_settings].each do |setting_key, setting|
   if setting[:enable]
     execute "Add #{setting_key.to_s} custom settings" do
