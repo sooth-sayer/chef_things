@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: custom vim settings
+# Cookbook Name:: vim airline
 # Attributes:: default
 #
 # Copyright 2010, Opscode, Inc.
@@ -15,10 +15,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-default[:custom_vim_settings][:airline] = {
-  enable: true,
-  settings_before: <<-EOS
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-  EOS
-}

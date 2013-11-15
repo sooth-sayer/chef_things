@@ -28,3 +28,19 @@ end
     mode 0644
   end
 end
+
+node[:custom_vim_settings].each do |setting_key, setting|
+  if setting[:enable]
+    execute "Add #{setting_key.to_s} custom settings" do
+      user "#{node[:common][:user_name]}"
+      group "#{node[:common][:user_name]}"
+      environment ({ "HOME" => "#{node[:common][:home_path]}/#{node[:common][:user_name]}",
+                     "USER" => "#{node[:common][:user_name]}" })
+      setting.each do |option_key, option|
+        command <<-EOC
+          echo "#{option}" >> "#{node[:common][:home_path]}/#{node[:common][:user_name]}/.vim/custom/#{option_key.to_s}.vim"
+        EOC
+      end
+    end
+  end
+end
