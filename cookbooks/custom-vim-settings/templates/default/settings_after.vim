@@ -4,3 +4,5 @@ set t_Co=256
 set relativenumber
 " Toggle wrap lines
 set wrap
+" NERDTree options
+let NERDTreeWinSize = 30
