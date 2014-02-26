@@ -28,3 +28,6 @@
 [submodule "cookbooks/tmux"]
 	path = cookbooks/tmux
 	url = git@github.com:opscode-cookbooks/tmux.git
+[submodule "cookbooks/homebrew"]
+	path = cookbooks/homebrew
+	url = git@github.com:opscode-cookbooks/homebrew.git
