@@ -1,0 +1,11 @@
+{
+  "common": {
+	"user_name": "soothsayer",
+	"home_path": "/Users"
+  },
+  "run_list": [
+		"recipe[homebrew]",
+                "recipe[vim]", "recipe[janus]", "recipe[vim-ruby]", "recipe[custom-vim-settings]",
+		"recipe[vim-airline]", "recipe[vim-colorschemes]"
+  ]
+}
