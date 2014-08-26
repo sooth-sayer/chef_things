@@ -18,8 +18,8 @@
 #
 
 ctags_base_pkgs = value_for_platform(
-  ["ubuntu", "debian", "arch"] => { "default" => ["ctags"] },
-  "default" => ["ctags"]
+  ["ubuntu", "debian", "arch"] => { "default" => ["exuberant-ctags"] },
+  "default" => ["exuberant-ctags"]
 )
 
 ctags_base_pkgs.each do |ctags_base_pkg|

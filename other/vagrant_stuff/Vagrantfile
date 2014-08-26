@@ -84,8 +84,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
+
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "../chef/cookbooks"
+    chef.cookbooks_path = "~/stuff/chef/cookbooks"
     chef.add_recipe "sudo"
     chef.add_recipe "git"
     chef.add_recipe "git-flow"
@@ -93,8 +94,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "vim"
     chef.add_recipe "janus"
     chef.add_recipe "vim-ruby"
-    chef.add_recipe "custom-vim-settings"
     chef.add_recipe "rvm"
+    chef.add_recipe "tmux"
+    chef.add_recipe "custom-tmux-settings"
+    chef.add_recipe "vim-colorschemes"
+    chef.add_recipe "vim-airline"
+    chef.add_recipe "custom-vim-settings"
 
     chef.json = {
       :authorization => {
@@ -104,8 +109,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         }
       },
       :git_config => {
-        :user_name => "some_user",
-        :user_email => "some@user.email",
+        :user_name => "d.chernyatiev",
+        :user_email => "d.chernyatiev@undev.ru",
         :private_rsa_key_path => "/vagrant/id_rsa",
         :public_rsa_key_path => "/vagrant/id_rsa.pub"
       }

@@ -1,0 +1,15 @@
+{
+  "common": {
+	"user_name": "che",
+	"home_path": "/home"
+  },
+
+  "git_config": {
+    "user_name": "d.chernyatiev",
+    "user_email": "d.chernyatiev@gmail.com"
+  },
+
+  "run_list": [
+    "recipe[git-config]"
+  ]
+}

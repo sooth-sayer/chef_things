@@ -1,2 +1,2 @@
-cookbook_path "/Users/soothsayer/stuff/chef/cookbooks"
+cookbook_path "/home/che/stuff/chef/cookbooks"
 

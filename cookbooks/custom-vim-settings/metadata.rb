@@ -11,4 +11,6 @@ version          "0.0.1"
 end
 
 depends "common"
+depends "vim"
+depends "vim-colorschemes"
 depends "janus"

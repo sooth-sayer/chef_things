@@ -18,7 +18,8 @@
 #
 
 ack_base_pkgs = value_for_platform(
-  ["ubuntu", "debian", "arch"] => { "default" => ["ack"] },
+  ["debian", "arch"] => { "default" => ["ack"] },
+  "ubuntu" => { "default" => ["ack-grep"] },
   "default" => ["ack"]
 )
 
